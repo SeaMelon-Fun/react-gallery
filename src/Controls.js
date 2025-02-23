@@ -99,6 +99,14 @@ function controls(camera){
             }
         }
 
+        // walls
+        if (Math.abs(camera.position.z) > 10){
+            camera.position.z = 10*Math.sign(camera.position.z)
+        }
+        if (Math.abs(camera.position.x) > 10){
+            camera.position.x = 10*Math.sign(camera.position.x)
+        }
+
         requestAnimationFrame(animate);
     };
     animate();

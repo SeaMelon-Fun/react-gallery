@@ -18,15 +18,21 @@ function MyThree() {
     // creating scene
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    var renderer = new THREE.WebGLRenderer();
+    const canvas = document.querySelector('#c');
+    const renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        canvas,
+        alpha: true,
+      });
+    // const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
     refContainer.current && refContainer.current.appendChild( renderer.domElement );
 
     // importing components
-    floor(scene)
-    wall(scene, [0,1.570796,-11,2,0],"Disappear among\nthe sea of butterflies\nillusions of the past")
-    wall(scene, [0,0,0,2,-11],"")
     chest(scene)
+    floor(scene)
+    wall(scene, [0,1.570796,-11,2,0],"Controls\nWASD - Move\nQE - Rotate\nSPACE - Jump")
+    wall(scene, [0,0,0,2,-11],"")
     globe(scene)
     frame(scene)
     
