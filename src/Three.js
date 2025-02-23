@@ -3,6 +3,10 @@ import * as THREE from 'three';
 import floor from './components/Floor'
 import wall from './components/Wall'
 import chest from './components/Chest'
+import globe from './components/Globe'
+import frame from './components/Frame'
+
+import controls from './Controls'
 
 import { useEffect, useRef } from "react";
 
@@ -23,12 +27,15 @@ function MyThree() {
     wall(scene, [0,1.570796,-11,2,0])
     wall(scene, [0,0,0,2,-11])
     chest(scene)
+    globe(scene)
+    frame(scene)
     
     // default position
     camera.position.z = 3;
     camera.position.x = 9;
     camera.position.y = 1;
     camera.rotation.y = 1.0353982000000002;
+    controls(camera)
 
     var animate = function () {
       requestAnimationFrame(animate);
