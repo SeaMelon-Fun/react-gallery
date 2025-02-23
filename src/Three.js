@@ -24,8 +24,8 @@ function MyThree() {
 
     // importing components
     floor(scene)
-    wall(scene, [0,1.570796,-11,2,0])
-    wall(scene, [0,0,0,2,-11])
+    wall(scene, [0,1.570796,-11,2,0],"Disappear among\nthe sea of butterflies\nillusions of the past")
+    wall(scene, [0,0,0,2,-11],"")
     chest(scene)
     globe(scene)
     frame(scene)

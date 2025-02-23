@@ -17,6 +17,13 @@ function globe(scene) {
     cylinderGem.position.y = -0.5;
     cylinderGem.position.z = 4;
     cylinderGem.position.x = 2;
+
+    function animate() {
+        cylinderGem.rotation.x += 0.01;
+        cylinderGem.rotation.y += 0.01;
+        requestAnimationFrame(animate);
+    }
+    animate();
 }
 
 export default globe
