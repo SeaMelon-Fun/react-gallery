@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-function chest(scene) {
+function chest(scene, debug) {
     const loader = new GLTFLoader();
     loader.load( 'http://localhost:3000/models/chest.glb', function ( gltf ) {
         gltf.scene.scale.multiplyScalar(4);
@@ -15,7 +15,9 @@ function chest(scene) {
     const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 5 );
     scene.add( light );
     const helper = new THREE.HemisphereLightHelper( light, 2 );
-    scene.add(helper)
+    if (debug){
+        scene.add(helper)
+    }
 }
 
 export default chest

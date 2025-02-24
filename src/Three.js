@@ -30,9 +30,9 @@ function MyThree() {
     refContainer.current && refContainer.current.appendChild( renderer.domElement );
 
     // importing components
-    chest(scene)
+    chest(scene, true)
     floor(scene)
-    wall(scene, [0,1.570796,-11,2,0],"Controls\nWASD - Move\nQE - Rotate\nSPACE - Jump")
+    wall(scene, [0,1.570796,-11,2,0],"[Controls]\nWASD/QE - Move\nSPACE - Jump\nX - Shoot\n/ - Debug")
     wall(scene, [0,0,0,2,-11],"")
     globe(scene)
     frame(scene)
