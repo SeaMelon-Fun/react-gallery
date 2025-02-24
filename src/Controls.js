@@ -14,7 +14,6 @@ function controls(camera){
     
     var isJumping = false;
     var jumpSpeed = 0.2;
-    var jumpHeight = 1;
     var velocityY = 0;
     var gravity = 0.01;
 

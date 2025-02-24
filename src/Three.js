@@ -7,6 +7,7 @@ import globe from './components/Globe'
 import frame from './components/Frame'
 
 import controls from './Controls'
+import collisions from './Collisions'
 
 import { useEffect, useRef } from "react";
 
@@ -41,7 +42,10 @@ function MyThree() {
     camera.position.x = 9;
     camera.position.y = 1;
     camera.rotation.y = 1.0353982000000002;
+
+    // movements, collisions and physics
     controls(camera)
+    collisions(scene,camera, true)
 
     var animate = function () {
       requestAnimationFrame(animate);

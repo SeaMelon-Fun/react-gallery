@@ -15,6 +15,7 @@ function chest(scene) {
     const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 5 );
     scene.add( light );
     const helper = new THREE.HemisphereLightHelper( light, 2 );
+    scene.add(helper)
 }
 
 export default chest
