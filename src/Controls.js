@@ -91,8 +91,8 @@ function controls(camera){
         if (isJumping) {
             camera.position.y += velocityY;
             velocityY -= gravity;
-            if (camera.position.y <= 1) { // assuming ground level is at y=1
-                camera.position.y = 1;
+            if (camera.position.y <= 2) { // assuming ground level is at y=1
+                camera.position.y = 2;
                 isJumping = false;
                 velocityY = 0;
             }

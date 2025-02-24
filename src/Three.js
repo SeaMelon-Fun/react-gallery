@@ -40,7 +40,7 @@ function MyThree() {
     // default position
     camera.position.z = 3;
     camera.position.x = 9;
-    camera.position.y = 1;
+    camera.position.y = 2;
     camera.rotation.y = 1.0353982000000002;
 
     // movements, collisions and physics
