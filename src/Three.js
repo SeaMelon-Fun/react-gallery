@@ -17,6 +17,8 @@ function MyThree() {
   useEffect(() => {
     console.log("MyThree component rendered");
 
+    let debug = false;
+
     // creating scene
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -31,9 +33,9 @@ function MyThree() {
     refContainer.current && refContainer.current.appendChild( renderer.domElement );
 
     // importing components
-    chest(scene, true)
+    chest(scene, debug)
     floor(scene)
-    wall(scene, [0,1.570796,-11,2,0],"[Controls]\nWASD/QE - Move\nSPACE - Jump\nENTER - Shoot\n/ - Debug")
+    wall(scene, [0,1.570796,-11,2,0],"[Controls]\nWASD/QE - Move\nSPACE - Jump\nENTER - Shoot")
     wall(scene, [0,0,0,2,-11],"")
     globe(scene)
     frame(scene)
@@ -46,7 +48,7 @@ function MyThree() {
 
     // movements, collisions and physics
     controls(camera)
-    collisions(scene,camera, true)
+    collisions(scene,camera, debug)
     shooting(scene, camera)
 
     var animate = function () {
