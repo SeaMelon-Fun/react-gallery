@@ -33,7 +33,7 @@ function MyThree() {
     // importing components
     chest(scene, true)
     floor(scene)
-    wall(scene, [0,1.570796,-11,2,0],"[Controls]\nWASD/QE - Move\nSPACE - Jump\nX - Shoot\n/ - Debug")
+    wall(scene, [0,1.570796,-11,2,0],"[Controls]\nWASD/QE - Move\nSPACE - Jump\nENTER - Shoot\n/ - Debug")
     wall(scene, [0,0,0,2,-11],"")
     globe(scene)
     frame(scene)
