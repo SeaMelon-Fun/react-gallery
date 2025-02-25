@@ -8,6 +8,7 @@ import frame from './components/Frame'
 
 import controls from './Controls'
 import collisions from './Collisions'
+import shooting from './Shooting'
 
 import { useEffect, useRef } from "react";
 
@@ -46,6 +47,7 @@ function MyThree() {
     // movements, collisions and physics
     controls(camera)
     collisions(scene,camera, true)
+    shooting(scene, camera)
 
     var animate = function () {
       requestAnimationFrame(animate);
